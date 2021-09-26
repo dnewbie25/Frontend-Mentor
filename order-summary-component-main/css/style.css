@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --primary-paleBlue: hsl(225, 100%, 94%);
+    --primary-brightBlue: hsl(245, 75%, 52%);
+    --neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+    --font-red-hat: 'Red Hat Display', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+}
+
+html {
+    background-image: url('../images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--primary-paleBlue);
+}
+
+/* card styling for max 375px mobile first*/
+
+.card-component {
+    max-width: 326px;
+    height: 570px;
+    margin: 6rem auto;
+    border-radius: 1rem;
+    background-color: var(--neutral-very-pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 1rem 1rem #C9D3F7;
+}
+
+/* card items size */
+
+.div-hero {
+    flex-basis: 30%;
+    background-image: url('../images/illustration-hero.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.order-description {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 3rem;
+}
+
+.plan {
+    flex-basis: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.plan .music-icon {
+    color: black;
+    flex-grow: 1;
+}
+
+.plan .plan-info{
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan a{
+    flex-grow: 1;
+}
+
+.plan a:hover{
+    color: #8A84C1;
+    text-decoration: none;
+}
+
+.payment {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.div-hero,
+.order-description,
+.plan,
+.payment {
+    text-align: center;
+    font-family: var(--font-red-hat);
+    flex-grow: 1;
+}
+
+button {
+    font-family: var(--font-red-hat);
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    align-self: center;
+    flex-grow: 1;
+    cursor: pointer;
+    width: 80%;
+}
+
+/* card items fonts and styles*/
+
+.order-description h3,
+.plan-info p:first-child {
+    color: var(--neutral-dark-blue);
+    font-weight: 900;
+}
+
+.order-description p,
+.plan-info p:last-child {
+    color: var(--neutral-desaturated-blue);
+}
+
+/* card button styles */
+
+button:first-child {
+    background-color: var(--primary-brightBlue);
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 1rem var(--neutral-desaturated-blue);
+    z-index: 2;
+}
+
+button:last-child {
+    background-color: transparent;
+    color: var(--neutral-desaturated-blue);
+    z-index: 0;
+}
+
+button:first-child:hover{
+    background-color: #766CF1;
+}
+
+button:last-child:hover{
+    color: #24294F;
+}
+
+/* media queries up to 1440px */
+
+@media (min-width:376px) {
+    html {
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-color: var(--primary-paleBlue);
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-component {
+        max-width: 450px;
+        margin: 6rem 25px;
+    }
+
+    .order-description h3{
+        font-size: 24px;
+    }
+
+    .order-description p,
+    .plan-info p:last-child {
+        color: var(--neutral-desaturated-blue);
+    }
+}
