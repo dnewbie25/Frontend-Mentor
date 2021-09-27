@@ -182,3 +182,12 @@ button:last-child:hover{
         color: var(--neutral-desaturated-blue);
     }
 }
+
+@media (min-width:1441px) {
+    html{
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: var(--primary-paleBlue);
+    }
+}
