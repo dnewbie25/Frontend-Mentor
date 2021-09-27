@@ -1,0 +1,144 @@
+/* general styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --font-inter:'Inter', sans-serif;
+    --font-lexenda:'Lexend Deca', sans-serif;
+    --primary-background:hsl(233, 47%, 7%);
+    --primary-card-background:hsl(244, 38%, 16%);
+    --primary-acent:hsl(277, 64%, 61%);
+    --mainHeading-stats:hsl(0, 0%, 100%);
+    --paragrahp-color:hsla(0, 0%, 100%, 0.75);
+    --stats-headings:hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+}
+
+body{
+    font-size: 15px;
+    background-color: var(--primary-background);
+    font-family: var(--font-inter);
+}
+
+.card{
+    background-color: var(--primary-card-background);
+}
+
+.card .image .accent{
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-acent);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    color: var(--mainHeading-stats);
+}
+
+p{
+    color: var(--paragrahp-color);
+}
+
+span{
+    color: var(--primary-acent);
+}
+
+.stats1{
+    color: var(--mainHeading-stats);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats2{
+    font-family: var(--font-lexenda);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+/* positioning */
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.card{
+    margin-top: 2rem;
+    max-width: 875px;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-body{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-body h1{
+    margin-bottom: 1.5rem;
+}
+
+.card-body > p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-body .stats{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body .stats div {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+/* image style */
+
+.card .accent,
+.card .accent img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.accent img {
+    z-index: -1;
+}
+
+.accent{
+    position: relative;
+}
+
+.accent .background{
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: 99.5%;
+    position: absolute;
+    top: 0;
+    background-color: var(--primary-acent);
+    opacity: 0.61;
+}
+
+/* media querie for the stats at 570 */
+
+/* media querie for all layout at 678 put desktop image */
