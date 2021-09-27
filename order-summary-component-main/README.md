@@ -25,8 +25,8 @@ Creating an order summary card where users should be able to see hover states fo
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dnewbie25/Frontend-Mentor/tree/main/order-summary-component-main)
-- Live Site URL: [Add live site URL here](https://order-summarycomponent.netlify.app)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/order-summary-component-main)
+- [Live Site URL](https://order-summarycomponent.netlify.app)
 
 ## My process
 
