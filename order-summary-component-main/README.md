@@ -21,7 +21,7 @@ Creating an order summary card where users should be able to see hover states fo
 
 ### Screenshot
 
-![](Order summary card.png)
+<img src="Order summary card.png"></img>
 
 ### Links
 
