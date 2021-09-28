@@ -88,6 +88,11 @@ body{
     flex-wrap: wrap;
 }
 
+.accent,
+.card-body{
+    flex-grow: 1;
+}
+
 .card-body{
     padding: 1.5rem;
     text-align: center;
@@ -139,6 +144,38 @@ body{
     opacity: 0.61;
 }
 
-/* media querie for the stats at 570 */
+/* media queries */
 
-/* media querie for all layout at 678 put desktop image */
+@media (min-width:450px) and (max-width:819px) {
+    .card{
+        max-width: 400px;
+    }    
+}
+
+
+@media (min-width:820px){
+    .card{
+        margin-top: 5rem;
+    }
+
+    .card .accent .image img,
+    .card .background{
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .accent,
+    .card-body{
+        flex-basis: 50%;
+    }
+
+    .card-body{
+        text-align: left;
+        display: block;
+        max-width: 50%;
+        order: -1;
+    }
+
+    .card-body .stats{
+        flex-direction: row;
+    }
+}
