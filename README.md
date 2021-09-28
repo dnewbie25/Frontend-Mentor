@@ -6,12 +6,12 @@ This is a compilation of Frontend projects based on professional designs from [f
 
 ### HTML & CSS
 
-- Order Summary Component
+Order Summary Component
 
-* [Live Site](https://order-summarycomponent.netlify.app)
-* [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/order-summary-component-main)
+  * [Live Site](https://order-summarycomponent.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/order-summary-component-main)
 
-- Stats Card Component
+Stats Card Component
 
-* [Live Site](https://my-statspreview.netlify.app)
-* [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/stats-preview-card-component-main)
+  * [Live Site](https://my-statspreview.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/stats-preview-card-component-main)
