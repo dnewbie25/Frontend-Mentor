@@ -1,0 +1,19 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$font-lexend:'Lexend Deca', sans-serif;
+$font-big-shoulders:'Big Shoulders Display', cursive;
+
+// colors
+$card-1:hsl(31, 77%, 52%);
+$card-2:hsl(184, 100%, 22%);
+$card-3:hsl(179, 100%, 13%);
+$transparency:hsla(0, 0%, 100%, 0.75);
+$text-color:hsl(0, 0%, 95%);
+
+// sizes
+$max-card-width: 308px;
+$margin-1: 12px;
+$margin-2:2rem;
+$margin-3: 2.5rem;
+$margin-4: 3rem;
