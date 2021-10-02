@@ -15,3 +15,8 @@ Stats Card Component
 
   * [Live Site](https://my-statspreview.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/stats-preview-card-component-main)
+
+3-Column Card Component
+
+  * [Live Site](https://3cars-component-card.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/3-column-preview-card-component-main)
