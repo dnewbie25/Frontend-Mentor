@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Preview
 
-![](images\preview.png)
+![](images/preview.png)
 
 - [Live Site URL](https://3cars-component-card.netlify.app)
 
