@@ -20,3 +20,8 @@ Stats Card Component
 
   * [Live Site](https://3cars-component-card.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/3-column-preview-card-component-main)
+
+Social Proof Section
+
+  * [Live Site](https://social-proof-by-me.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/social-proof-section-master)
