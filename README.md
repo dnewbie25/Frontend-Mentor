@@ -4,7 +4,10 @@ This is a compilation of Frontend projects based on professional designs from [f
 
 ## Table of Content
 
-### HTML & CSS
+  * [HTML & CSS Only](https://github.com/dnewbie25/Frontend-Mentor/edit/main/README.md#html--css-only)
+  * [HTML, CSS & Javascript](https://github.com/dnewbie25/Frontend-Mentor/edit/main/README.md#html-css--javascript)
+
+### HTML & CSS Only
 
 Order Summary Component
 
@@ -25,3 +28,5 @@ Social Proof Section
 
   * [Live Site](https://social-proof-by-me.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/social-proof-section-master)
+
+### HTML, CSS & Javascript
