@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL:](https://github.com/dnewbie25/Frontend-Mentor/tree/main/social-proof-section-master)
-- [Live Site URL:](https://social-proof-by-me.netlify.app)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/social-proof-section-master)
+- [Live Site URL](https://social-proof-by-me.netlify.app)
 
 ## My process
 
