@@ -4,24 +4,11 @@ const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const submit = document.getElementById('submit');
-// IIFE for the
 
 submit.addEventListener('click',e=>{
   const inputFields = Array.from(document.getElementsByTagName('input'));
-  for(const field of inputFields){
-    console.log(emptyField(field));
-  }
+  // displays the error symbol and message
   inputFields.forEach(field=>{
-    // validating email
-    // if(field.type==='email' && validEmail(field.value)===false){
-    //   const parent = field.parentElement;
-    //   const img = parent.children[1];
-    //   const errorMessage = parent.children[2];
-    //   field.style.borderColor = 'hsl(0, 100%, 74%)';
-    //   img.style.display = 'block';
-    //   errorMessage.style.display = 'block';
-    // }
-    // other fields
     if(emptyField(field)){
       const parent = field.parentElement;
       const img = parent.children[1];
@@ -31,14 +18,6 @@ submit.addEventListener('click',e=>{
       errorMessage.style.display = 'block';
     }
   })
-  // firstName.value = '';
-  // firstName.blur();
-  // lastName.value = '';
-  // lastName.blur();
-  // email.value = '';
-  // email.blur();
-  // password.value = '';
-  // password.blur();
 });
 
 function validEmail(email){
