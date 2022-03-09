@@ -59,13 +59,73 @@ body {
 .form{
   background-color: white;
   color: black;
-  button{
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0px 7px 10px hsla(0, 39%, 47%, 0.733);
+  div{
+    width: 100%;
+    padding: 0;
+    height: auto;
+    position: relative;
+    img,span{
+      display: none;
+      position: absolute;
+    }
+    img{
+      right: 0;
+      top: 0;
+    }
+    span{
+      font-size: 0.7rem;
+      color: $Red;
+      right: 0;
+      bottom: -10px;
+    }
+  }
+  input{
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border: 2px solid $Grayish-Blue;
+    border-radius: 7px;
+    font-size: 1rem;
+    transition: all 200ms;
+    &:focus{
+      outline: none;
+    }
+  }
+  #submit{
     display: block;
     margin: 0 auto;
-    max-width: 400px;
     background-color: $Green;
+    border-radius: 10px;
     color: white;
     border: none;
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    box-shadow: 0px 5px 3px hsla(154, 53%, 32%, 0.527);
+    font-weight: 600;
+    transition: all 200ms;
+    &:hover{
+      background-color: hsla(154, 59%, 51%, 0.801);
+      box-shadow: 0px 5px 3px hsla(154, 78%, 69%, 0.596);
+      cursor: pointer;
+      
+    }
+  }
+  .disclosure{
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    color: $Grayish-Blue;
+    .terms{
+      text-decoration: none;
+      color: $Red;
+      font-weight: 700;
+      transition: all 200ms;
+      &:hover{
+        color: hsl(0, 45%, 55%);
+      }
+    }
   }
 }
 // footer

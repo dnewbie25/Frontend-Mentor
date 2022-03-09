@@ -71,15 +71,90 @@ body * {
 .form {
   background-color: white;
   color: black;
+  width: 85%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 10px rgba(167, 73, 73, 0.733);
+          box-shadow: 0px 7px 10px rgba(167, 73, 73, 0.733);
 }
 
-.form button {
+.form div {
+  width: 100%;
+  padding: 0;
+  height: auto;
+  position: relative;
+}
+
+.form div img, .form div span {
+  display: none;
+  position: absolute;
+}
+
+.form div img {
+  right: 0;
+  top: 0;
+}
+
+.form div span {
+  font-size: 0.7rem;
+  color: #ff7a7a;
+  right: 0;
+  bottom: -10px;
+}
+
+.form input {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border: 2px solid #b9b6d3;
+  border-radius: 7px;
+  font-size: 1rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form #submit {
   display: block;
   margin: 0 auto;
-  max-width: 400px;
   background-color: #38cc8c;
+  border-radius: 10px;
   color: white;
   border: none;
+  font-size: 1rem;
+  padding: 1.5rem 0;
+  -webkit-box-shadow: 0px 5px 3px rgba(38, 125, 87, 0.527);
+          box-shadow: 0px 5px 3px rgba(38, 125, 87, 0.527);
+  font-weight: 600;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.form #submit:hover {
+  background-color: rgba(56, 204, 140, 0.801);
+  -webkit-box-shadow: 0px 5px 3px rgba(114, 238, 184, 0.596);
+          box-shadow: 0px 5px 3px rgba(114, 238, 184, 0.596);
+  cursor: pointer;
+}
+
+.form .disclosure {
+  display: block;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #b9b6d3;
+}
+
+.form .disclosure .terms {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 700;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.form .disclosure .terms:hover {
+  color: #c05959;
 }
 
 .attribution {
