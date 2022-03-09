@@ -4,8 +4,8 @@ This is a compilation of Frontend projects based on professional designs from [f
 
 ## Table of Content
 
-  * [HTML & CSS Only](https://github.com/dnewbie25/Frontend-Mentor/edit/main/README.md#html--css-only)
-  * [HTML, CSS & Javascript](https://github.com/dnewbie25/Frontend-Mentor/edit/main/README.md#html-css--javascript)
+  * [HTML & CSS Only](https://github.com/dnewbie25/Frontend-Mentor/main/README.md#html--css-only)
+  * [HTML, CSS & Javascript](https://github.com/dnewbie25/Frontend-Mentor/main/README.md#html-css--javascript)
 
 ### HTML & CSS Only
 
