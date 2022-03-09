@@ -46,5 +46,5 @@ Using SASS to create a project from scratch and compiling it directly into the c
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://https://www.frontendmentor.io/profile/dnewbie25)
-- DevChallenges - [Add your name here](https://https://devchallenges.io/portfolio/dnewbie25)
+- Frontend Mentor - [@dnewbie25](https://https://www.frontendmentor.io/profile/dnewbie25)
+- DevChallenges - [dnewbie25](https://https://devchallenges.io/portfolio/dnewbie25)
