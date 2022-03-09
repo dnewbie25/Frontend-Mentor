@@ -6,6 +6,7 @@ const password = document.getElementById('password');
 const submit = document.getElementById('submit');
 
 submit.addEventListener('click',e=>{
+  e.preventDefault();
   const inputFields = Array.from(document.getElementsByTagName('input'));
   // displays the error symbol and message
   inputFields.forEach(field=>{
