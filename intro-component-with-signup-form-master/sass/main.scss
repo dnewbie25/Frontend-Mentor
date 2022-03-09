@@ -1,0 +1,79 @@
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  height: 100%;
+  background-color: $Red;
+  background-image: url("./../images/bg-intro-mobile.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  *{
+    padding: 1rem;
+  }
+}
+
+// from 375px to 750px
+
+.head{
+  text-align: center;
+  color: white;
+  .title{
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-weight: 700;
+  }
+  .subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  .banner{
+    font-weight: 700;
+    background-color: $Blue;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 7px 5px hsla(0, 39%, 47%, 0.733);
+    span{
+      font-weight: 400;
+      padding: 0;
+      display: block;
+    }
+  }
+}
+
+
+.form{
+  background-color: white;
+  color: black;
+  button{
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: $Green;
+    color: white;
+    border: none;
+  }
+}
+// footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
