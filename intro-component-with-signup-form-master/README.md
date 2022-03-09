@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/social-proof-section-master)
-- [Live Site URL](https://social-proof-by-me.netlify.app)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/intro-component-with-signup-form-master)
+- [Live Site URL](https://intro-component-with-signup-form-master-by-me.netlify.app)
 
 ## My process
 
@@ -49,5 +49,5 @@ Using SASS to create a project from scratch and validating the form fields with 
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://https://www.frontendmentor.io/profile/dnewbie25)
-- DevChallenges - [Add your name here](https://https://devchallenges.io/portfolio/dnewbie25)
+- Frontend Mentor - [@dnewbie25](https://https://www.frontendmentor.io/profile/dnewbie25)
+- DevChallenges - [dnewbie25](https://https://devchallenges.io/portfolio/dnewbie25)
