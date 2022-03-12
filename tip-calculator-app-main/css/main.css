@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+html {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+body h1 {
+  color: #5e7a7d;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+body h1 span {
+  display: block;
+}
+
+main {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #7f9c9f;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+main div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+main div input,
+main div button {
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  outline: none;
+  padding: 0.5rem;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  font-size: 24px;
+}
+
+main div button {
+  cursor: pointer;
+}
+
+main div input:focus {
+  border-color: #26c0ab;
+}
+
+.bill-total input {
+  background-image: url("./../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: 10px;
+  text-align: right;
+}
+
+.select-tip .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.select-tip .buttons #custom-tip {
+  display: block;
+  width: calc(50% - 1rem);
+  margin: 0.5rem;
+  text-align: right;
+}
+
+.select-tip .buttons button {
+  width: calc(50% - 1rem);
+  margin: 0.5rem;
+  color: white;
+  background-color: #00494d;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  border: 2px solid transparent;
+}
+
+.select-tip .buttons button:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.select-tip .buttons button:active {
+  border-color: #26c0ab;
+  color: #00494d;
+  background-color: white;
+}
+
+.people input {
+  background-image: url("./../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: 10px;
+  text-align: right;
+}
+
+.calculator {
+  background-color: #00494d;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.calculator #tip-person,
+.calculator #total-person {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator #tip-person p,
+.calculator #total-person p {
+  color: #f4fafa;
+}
+
+.calculator #tip-person p span,
+.calculator #total-person p span {
+  color: #7f9c9f;
+  display: block;
+}
+
+.calculator #tip-person .result,
+.calculator #total-person .result {
+  color: #26c0ab;
+  font-size: 2.5rem;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.calculator #reset {
+  margin: 0.5rem;
+  color: white;
+  background-color: #00494d;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  border: 2px solid transparent;
+  background-color: #26c0ab;
+}
+
+.calculator #reset:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.calculator #reset:active {
+  border-color: #26c0ab;
+  color: #00494d;
+  background-color: white;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.5rem;
+  text-align: center;
+  bottom: 0;
+}
+
+.attribution * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=main.css.map */
