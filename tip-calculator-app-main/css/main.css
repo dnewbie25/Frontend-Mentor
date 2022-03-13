@@ -131,7 +131,7 @@ main div input:focus {
 
 .select-tip .buttons #custom-tip {
   display: block;
-  width: calc(50% - 1rem);
+  width: calc(33% - 1rem);
   margin: 0.5rem;
   text-align: right;
 }
