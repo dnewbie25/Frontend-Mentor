@@ -137,7 +137,7 @@ main div input:focus {
 }
 
 .select-tip .buttons button {
-  width: calc(50% - 1rem);
+  width: calc(33% - 1rem);
   margin: 0.5rem;
   color: white;
   background-color: #00494d;
