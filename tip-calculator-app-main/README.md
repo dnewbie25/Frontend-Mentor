@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dnewbie25/Frontend-Mentor/tree/main/tip-calculator-app-main)
-- Live Site URL: [Add live site URL here](https://tip-calculator-by-me.netlify.app)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/tip-calculator-app-main)
+- [Live Site URL](https://tip-calculator-by-me.netlify.app)
 
 ## My process
 
