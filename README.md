@@ -35,3 +35,8 @@ Intro component with sign up form solution
 
   * [Live Site](https://intro-component-with-signup-form-master-by-me.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/intro-component-with-signup-form-master)
+
+Tip Calculator
+
+  * [Live Site](https://tip-calculator-by-me.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/tip-calculator-app-main)
