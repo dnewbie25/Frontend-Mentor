@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/main.css">
   <title>Tip calculator app</title>
 
 </head>
+
 <body>
   <h1>SPLI<span>TTER</span></h1>
   <main>
@@ -19,11 +22,11 @@
     <div class="select-tip">
       <p>Select Tip %</p>
       <div class="buttons">
-        <button id="_5">5%</button>
-        <button id="_10">10%</button>
-        <button id="_15">15%</button>
-        <button id="_25">25%</button>
-        <button id="_50">50%</button>
+        <button id="_5" value="5" class="tip-value">5%</button>
+        <button id="_10" value="10" class="tip-value">10%</button>
+        <button id="_15" value="15" class="tip-value">15%</button>
+        <button id="_25" value="25" class="tip-value">25%</button>
+        <button id="_50" value="50" class="tip-value">50%</button>
         <input type="number" placeholder="Custom" id="custom-tip">
       </div>
     </div>
@@ -34,18 +37,20 @@
     <div class="calculator">
       <div id="tip-person">
         <p>Tip Amount <span>/ person</span></p>
-        <div class="result">$12</div>
+        <div class="result">$0.00</div>
       </div>
       <div id="total-person">
-          <p>Total <span>/ person</span></p>
-          <div class="result">$23</div>
+        <p>Total <span>/ person</span></p>
+        <div class="result">$0.00</div>
       </div>
       <button id="reset">Reset</button>
     </div>
   </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
