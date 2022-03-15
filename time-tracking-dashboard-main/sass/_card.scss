@@ -1,0 +1,62 @@
+@import "config";
+
+article {
+  border-radius: 15px;
+  padding: 1rem;
+  min-height: 90px;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.work {
+  background-image: url("./../images/icon-work.svg");
+  background-color: $Light-red-work;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
+  background-position: top right;
+}
+
+.play {
+  background-image: url("./../images/icon-play.svg");
+  background-color: $Soft-blue-play;
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: top right;
+}
+
+.study {
+  background-image: url("./../images/icon-study.svg");
+  background-color: $Light-red-study;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
+  background-position: top right;
+}
+
+.exercise {
+  background-image: url("./../images/icon-exercise.svg");
+  background-color: $Lime-green-exercise;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
+  background-position: top right;
+}
+
+.social {
+  background-image: url("./../images/icon-social.svg");
+  background-color: $Violet-social;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
+  background-position: top right;
+}
+
+.care {
+  background-image: url("./../images/icon-self-care.svg");
+  background-color: $Soft-orange-self-care;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3rem;
+  background-position: top right;
+}
