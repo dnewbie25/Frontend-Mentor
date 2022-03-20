@@ -40,3 +40,8 @@ Tip Calculator
 
   * [Live Site](https://tip-calculator-by-me.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/tip-calculator-app-main)
+
+Time Tracking Dashboard
+
+  * [Live Site](https://time-tracking-dashboard-by-me.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/time-tracking-dashboard-main)
