@@ -119,6 +119,10 @@ article .card-title:hover {
           justify-content: space-between;
 }
 
+.user--information__name h1 span {
+  color: white;
+}
+
 .user--information__name img {
   width: 90px;
 }
@@ -128,6 +132,7 @@ article .card-title:hover {
   grid-column: 1/-1;
   background-color: #1c1f4a;
   border-radius: 1rem;
+  padding: 1rem 0;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -230,6 +235,11 @@ article .card-title:hover {
   height: 60%;
 }
 
+.work .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 .work .card-title .actual-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,6 +308,11 @@ article .card-title:hover {
 
 .play .card-title {
   height: 60%;
+}
+
+.play .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .play .card-title .actual-time {
@@ -371,6 +386,11 @@ article .card-title:hover {
   height: 60%;
 }
 
+.study .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 .study .card-title .actual-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,6 +460,11 @@ article .card-title:hover {
 
 .exercise .card-title {
   height: 60%;
+}
+
+.exercise .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .exercise .card-title .actual-time {
@@ -513,6 +538,11 @@ article .card-title:hover {
   height: 60%;
 }
 
+.social .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 .social .card-title .actual-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,6 +612,11 @@ article .card-title:hover {
 
 .care .card-title {
   height: 60%;
+}
+
+.care .card-title div:first-child h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .care .card-title .actual-time {

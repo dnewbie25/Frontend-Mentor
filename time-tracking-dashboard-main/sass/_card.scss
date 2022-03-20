@@ -4,6 +4,10 @@
   height: 100%;
   .card-title{
     height: 60%;
+    div:first-child h2{
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
     .actual-time{
       display: flex;
       justify-content: space-between;
@@ -114,6 +118,9 @@ article {
       border-radius: 50%;
     }
     &__name{
+      h1 span{
+        color: white;
+      }
       padding: 1rem;
       grid-column: 1/-1;
       display: flex;
@@ -127,6 +134,7 @@ article {
       grid-column: 1/-1;
       background-color: $Dark-blue;
       border-radius: 1rem;
+      padding: 1rem 0;
       flex-grow: 2;
       flex-basis: 100%;
       display: flex;
