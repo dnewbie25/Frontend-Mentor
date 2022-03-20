@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/time%20track.PNG)
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/time-tracking-dashboard-main)
+- [Live Site URL](https://time-tracking-dashboard-by-me.netlify.app)
 
 ## My process
 
@@ -38,13 +38,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SASS for custom styling
+- Javascript JSON format and populating the DOM with data
 - Mobile-first workflow
 
 ### What I learned
 
-...
+Manipulating the DOM and using Javascript objects to populate the DOM elements with the requested information.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@dnewbie25](https://www.frontendmentor.io/profile/dnewbie25)
+- DevChallenges - [dnewbie25](https://devchallenges.io/portfolio/dnewbie25)
