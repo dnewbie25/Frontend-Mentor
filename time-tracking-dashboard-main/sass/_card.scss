@@ -1,11 +1,152 @@
 @import "config";
 
+@mixin cardTitle {
+  height: 100%;
+  .card-title{
+    height: 60%;
+  }
+}
+
 article {
-  border-radius: 15px;
-  padding: 1rem;
-  min-height: 90px;
-  width: 200px;
+  border-radius: 1rem;
+  min-height: 110px;
+  width: 100%;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .card-title{
+    padding: 1rem;
+    width: 100%;
+    background-color: $Dark-blue;
+    border-radius: 1rem;
+    div:first-child{
+      display: flex;
+      justify-content: space-between;
+      *{
+        flex-grow: 1;
+      }
+      img{
+        max-width: 1.4rem;
+        height: 7px;
+        transition: all 200ms;
+        &:hover{
+          filter: brightness(300%);
+          cursor: pointer;
+        }
+      }
+    }
+    transition: all 200ms;
+    &:hover{
+      background-color: $Desaturated-blue;
+    }
+  }
+  cursor: pointer;
+  @media (min-width:750px) {
+    .card-title{
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+    }
+  }
+}
+
+.user{
+  border-radius: 1rem;
+  text-align: center;
+  &--information{
+    border-radius: 1rem;
+    background-color: $Blue;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    text-align: left;
+    h1{
+      align-self: center;
+      justify-self: center;
+      font-size: 18px;
+      font-weight: 300;
+      color: $Pale-Blue;
+    }
+    h1>span{
+      display: block;
+      font-weight: 400;
+    }
+    img{
+      width: 100%;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+    &__name{
+      padding: 1rem;
+      grid-column: 1/-1;
+      display: flex;
+      justify-content: space-between;
+      img{
+        width: 90px;
+      }
+    }
+    &__time{
+      height: 50px;
+      grid-column: 1/-1;
+      background-color: $Dark-blue;
+      border-radius: 1rem;
+      flex-grow: 2;
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      button{
+        background-color: transparent;
+        border: none;
+        font-family: $font;
+        color: white;
+        margin: 0 1rem;
+      }
+    }
+    &__time{
+      button{
+        transition: all 200ms;
+        cursor: pointer;
+      }
+      button:hover{
+        color: $Desaturated-blue;
+      }
+    }
+  }
+  @media (min-width:750px) {
+    height: 100%;
+    margin: 0;
+    &--information{
+      flex-grow: 1;
+      &__name{
+        display: block;
+        img{
+          margin-bottom: 1rem;
+        }
+        h1 span{
+          margin-top: 0.5rem;
+          font-size: 2rem;
+          span{
+            display: block;
+          }
+        }
+      }
+      &__time{
+        width: 100%;
+        bottom: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        button{
+          font-size: 1rem;
+          align-self: center;
+        }
+      }
+    }
+  }
 }
 
 .work {
@@ -15,6 +156,7 @@ article {
   background-position: right;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
 
 .play {
@@ -23,6 +165,7 @@ article {
   background-repeat: no-repeat;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
 
 .study {
@@ -32,6 +175,7 @@ article {
   background-position: right;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
 
 .exercise {
@@ -41,6 +185,7 @@ article {
   background-position: right;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
 
 .social {
@@ -50,6 +195,7 @@ article {
   background-position: right;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
 
 .care {
@@ -59,4 +205,5 @@ article {
   background-position: right;
   background-size: 3rem;
   background-position: top right;
+  @include cardTitle;
 }
