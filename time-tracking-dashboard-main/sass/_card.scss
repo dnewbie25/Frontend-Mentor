@@ -4,7 +4,44 @@
   height: 100%;
   .card-title{
     height: 60%;
+    .actual-time{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        color: $Pale-Blue;
+        align-self: center;
+        display: block;
+        font-size: 0.8rem;
+      }
+      margin: 1rem auto;
+      font-size: 1.6rem;
+      @media (min-width:750px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        span{
+          align-self: flex-start;
+          margin: 0;
+          color: $Pale-Blue;
+          display: block;
+          font-size: 0.8rem;
+        }
+        margin: 1rem 0;
+        font-size: 1.6rem;
+      }
+    }
   }
+  @media (max-width:750px) {
+    height: 150px;
+    .card-title{
+      height: 80%;
+    }
+  }
+}
+
+.active{
+  color: $Desaturated-blue;
 }
 
 article {
@@ -96,6 +133,9 @@ article {
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      .active{
+        color: $Desaturated-blue;
+      }
       button{
         background-color: transparent;
         border: none;
@@ -133,16 +173,16 @@ article {
         }
       }
       &__time{
-        width: 100%;
+        min-width: 200px;
         bottom: 0;
         height: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         flex-wrap: wrap;
         button{
           font-size: 1rem;
-          align-self: center;
+          align-self: flex-start;
         }
       }
     }

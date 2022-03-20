@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.active {
+  color: #6f76c8;
+}
+
 article {
   border-radius: 1rem;
   min-height: 110px;
@@ -144,6 +148,10 @@ article .card-title:hover {
           justify-content: center;
 }
 
+.user--information__time .active {
+  color: #6f76c8;
+}
+
 .user--information__time button {
   background-color: transparent;
   border: none;
@@ -186,16 +194,16 @@ article .card-title:hover {
     display: block;
   }
   .user--information__time {
-    width: 100%;
+    min-width: 200px;
     bottom: 0;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-wrap: wrap;
@@ -203,9 +211,8 @@ article .card-title:hover {
   }
   .user--information__time button {
     font-size: 1rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
@@ -223,6 +230,63 @@ article .card-title:hover {
   height: 60%;
 }
 
+.work .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.work .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .work .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .work .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .work {
+    height: 150px;
+  }
+  .work .card-title {
+    height: 80%;
+  }
+}
+
 .play {
   background-image: url("./../images/icon-play.svg");
   background-color: #56c2e6;
@@ -234,6 +298,63 @@ article .card-title:hover {
 
 .play .card-title {
   height: 60%;
+}
+
+.play .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.play .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .play .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .play .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .play {
+    height: 150px;
+  }
+  .play .card-title {
+    height: 80%;
+  }
 }
 
 .study {
@@ -250,6 +371,63 @@ article .card-title:hover {
   height: 60%;
 }
 
+.study .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.study .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .study .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .study .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .study {
+    height: 150px;
+  }
+  .study .card-title {
+    height: 80%;
+  }
+}
+
 .exercise {
   background-image: url("./../images/icon-exercise.svg");
   background-color: #4acf81;
@@ -262,6 +440,63 @@ article .card-title:hover {
 
 .exercise .card-title {
   height: 60%;
+}
+
+.exercise .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.exercise .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .exercise .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .exercise .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .exercise {
+    height: 150px;
+  }
+  .exercise .card-title {
+    height: 80%;
+  }
 }
 
 .social {
@@ -278,6 +513,63 @@ article .card-title:hover {
   height: 60%;
 }
 
+.social .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.social .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .social .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .social .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .social {
+    height: 150px;
+  }
+  .social .card-title {
+    height: 80%;
+  }
+}
+
 .care {
   background-image: url("./../images/icon-self-care.svg");
   background-color: #f1c65b;
@@ -290,6 +582,63 @@ article .card-title:hover {
 
 .care .card-title {
   height: 60%;
+}
+
+.care .card-title .actual-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+}
+
+.care .card-title .actual-time span {
+  color: #bdc1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .care .card-title .actual-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .care .card-title .actual-time span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    color: #bdc1ff;
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .care {
+    height: 150px;
+  }
+  .care .card-title {
+    height: 80%;
+  }
 }
 
 * {
@@ -327,7 +676,7 @@ body {
 
 main {
   color: white;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,14 +710,11 @@ main {
         align-self: start;
   }
   main .user {
+    width: 100%;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
-}
-
-.active {
-  color: #6f76c8;
 }
 
 .attribution {
