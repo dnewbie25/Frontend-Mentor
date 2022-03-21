@@ -1,0 +1,80 @@
+@import "config";
+
+// slider style
+
+#slider{
+  appearance: none;
+  width: 100%;
+  transition: all 180ms;
+}
+
+@mixin thumb_hover{
+  appearance: none;
+  background-image: none;
+  background-color: $Soft-Cyan-Full-Slider-Bar;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  box-shadow: 0px 7px 20px $Strong-Cyan-Slider-Backround;
+  cursor: pointer;
+}
+
+@mixin thumb {
+  transition: all 180ms;
+  appearance: none;
+  background-image: url("./../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $Strong-Cyan-Slider-Backround;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  box-shadow: 0px 7px 30px $Strong-Cyan-Slider-Backround;
+  cursor: pointer;
+}
+
+@mixin track {
+  appearance: none;
+  background-color: $Soft-Cyan-Full-Slider-Bar;
+  height: 6px;
+  border-radius: 6px;
+}
+
+// thumb styles
+#slider::-moz-range-thumb{
+  @include thumb;
+  &:hover,
+  &:active{
+    @include thumb_hover;
+  }
+}
+#slider::-ms-thumb{
+  @include thumb;
+  &:hover,
+  &:active{
+    @include thumb_hover;
+  }
+}
+#slider::-webkit-slider-thumb{
+  margin-top: -14px;
+  @include thumb;
+  &:hover,
+  &:active{
+    @include thumb_hover;
+  }
+}
+
+// track
+#slider::-moz-range-track{
+  @include track;
+}
+#slider::-ms-track{
+  @include track;
+}
+#slider::-webkit-slider-runnable-track{
+  @include track;
+}
+
+// progress
