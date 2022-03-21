@@ -14,12 +14,15 @@
       <h1>Simple, traffic-based pricing</h1>
       <h2>Sign-up for our 30-day trial. No credit card required.</h2>
     </header> 
-  
+    <div class="container">
+      <input type="range" min="0" max="20" value="0" id="r2">
+      <input type="range" min="0" max="20" value="0" id="r1">
+    </div>
     <section>
       <p>Pageviews</p>
       <div class="slider">
         <label for="slider">
-          <input type="range" name="price" id="slider" min="0" max="20" step="5">
+          <input type="range" name="price" id="slider" min="0" max="20" step="5" value="0">
         </label>
       </div>
       <p>$ /month</p>
@@ -47,5 +50,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/dnewbie25">Daniel Montoya</a>.
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>

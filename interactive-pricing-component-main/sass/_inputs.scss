@@ -2,13 +2,14 @@
 
 // slider style
 
-#slider{
+#slider {
   appearance: none;
   width: 100%;
+  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
   transition: all 180ms;
 }
 
-@mixin thumb_hover{
+@mixin thumb_hover {
   appearance: none;
   background-image: none;
   background-color: $Soft-Cyan-Full-Slider-Bar;
@@ -37,44 +38,72 @@
 
 @mixin track {
   appearance: none;
-  background-color: $Soft-Cyan-Full-Slider-Bar;
+  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
   height: 6px;
   border-radius: 6px;
 }
 
-// thumb styles
-#slider::-moz-range-thumb{
-  @include thumb;
-  &:hover,
-  &:active{
-    @include thumb_hover;
-  }
-}
-#slider::-ms-thumb{
-  @include thumb;
-  &:hover,
-  &:active{
-    @include thumb_hover;
-  }
-}
-#slider::-webkit-slider-thumb{
-  margin-top: -14px;
-  @include thumb;
-  &:hover,
-  &:active{
-    @include thumb_hover;
-  }
-}
-
-// track
-#slider::-moz-range-track{
-  @include track;
-}
-#slider::-ms-track{
-  @include track;
-}
-#slider::-webkit-slider-runnable-track{
-  @include track;
+@mixin progress {
+  appearance: none;
+  background-color: $Soft-Cyan-Full-Slider-Bar;
+  height: 6px;
 }
 
 // progress
+//background-color: #4c515126;
+// height: 6px;
+//track
+// appearance: none;
+// background-color: #4c515126;
+// height: 6px;
+
+// thumb styles
+#slider::-moz-range-thumb {
+  @include thumb;
+
+  &:hover,
+  &:active {
+    @include thumb_hover;
+  }
+}
+
+#slider::-ms-thumb {
+  @include thumb;
+
+  &:hover,
+  &:active {
+    @include thumb_hover;
+  }
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -14px;
+  @include thumb;
+  &:hover,
+  &:active {
+    @include thumb_hover;
+  }
+}
+
+// track and progress
+#slider::-moz-range-track {
+  @include track;
+}
+
+#slider::-ms-track {
+  @include track;
+  &::-ms-fill-lower {
+    @include progress;
+  }
+}
+
+#slider::-webkit-slider-runnable-track {
+  @include track;
+  box-shadow: 1px 0 0 calc(100% - var("--value")) inset red;
+  
+}
+
+#slider::-moz-range-progress {
+  @include progress;
+}

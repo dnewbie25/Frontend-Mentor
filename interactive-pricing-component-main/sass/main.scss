@@ -24,3 +24,54 @@ main{
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+// test slider -  all right, replicate with only chrome stuff
+
+.container {
+  position: relative;
+  input {
+    appearance:none;
+    position: absolute;
+  }
+}
+
+#r1{
+  background-color: transparent;
+}
+
+#r2{
+  overflow: hidden;
+}
+
+#r1::-moz-range-track{
+  background-color: transparent;
+}
+#r1::-moz-range-thumb{
+  width: 25px;
+}
+
+#r2::-moz-range-track{
+  height: 100%;
+background-color: red;
+}
+#r2::-moz-range-thumb{
+  width: 25px;
+box-shadow: -100px 0 0 100px blue;
+}
+
+// chrome test
+#r1::-webkit-slider-runnable-track{
+  background-color: transparent;
+}
+#r1::-webkit-slider-thumb{
+  width: 25px;
+}
+
+#r2::-webkit-slider-runnable-track{
+  height: 100%;
+background-color: red;
+}
+#r2::-webkit-slider-thumb{
+  width: 25px;
+box-shadow: -100px 0 0 100px blue;
+}

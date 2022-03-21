@@ -5,6 +5,7 @@
      -moz-appearance: none;
           appearance: none;
   width: 100%;
+  background-color: #eaeefb;
   -webkit-transition: all 180ms;
   transition: all 180ms;
 }
@@ -68,11 +69,11 @@
 }
 
 #slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   margin-top: -14px;
   -webkit-transition: all 180ms;
   transition: all 180ms;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url("./../images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -103,24 +104,39 @@
 #slider::-moz-range-track {
   -moz-appearance: none;
        appearance: none;
-  background-color: #a5f3eb;
+  background-color: #eaeefb;
   height: 6px;
   border-radius: 6px;
 }
 
 #slider::-ms-track {
   appearance: none;
-  background-color: #a5f3eb;
+  background-color: #eaeefb;
   height: 6px;
   border-radius: 6px;
+}
+
+#slider::-ms-track::-ms-fill-lower {
+  appearance: none;
+  background-color: #a5f3eb;
+  height: 6px;
 }
 
 #slider::-webkit-slider-runnable-track {
   -webkit-appearance: none;
           appearance: none;
-  background-color: #a5f3eb;
+  background-color: #eaeefb;
   height: 6px;
   border-radius: 6px;
+  -webkit-box-shadow: 1px 0 0 calc(100% - var("--value")) inset red;
+          box-shadow: 1px 0 0 calc(100% - var("--value")) inset red;
+}
+
+#slider::-moz-range-progress {
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #a5f3eb;
+  height: 6px;
 }
 
 * {
@@ -147,5 +163,61 @@ main {
 
 .attribution a {
   color: #3e52a3;
+}
+
+.container {
+  position: relative;
+}
+
+.container input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+
+#r1 {
+  background-color: transparent;
+}
+
+#r2 {
+  overflow: hidden;
+}
+
+#r1::-moz-range-track {
+  background-color: transparent;
+}
+
+#r1::-moz-range-thumb {
+  width: 25px;
+}
+
+#r2::-moz-range-track {
+  height: 100%;
+  background-color: red;
+}
+
+#r2::-moz-range-thumb {
+  width: 25px;
+  box-shadow: -100px 0 0 100px blue;
+}
+
+#r1::-webkit-slider-runnable-track {
+  background-color: transparent;
+}
+
+#r1::-webkit-slider-thumb {
+  width: 25px;
+}
+
+#r2::-webkit-slider-runnable-track {
+  height: 100%;
+  background-color: red;
+}
+
+#r2::-webkit-slider-thumb {
+  width: 25px;
+  -webkit-box-shadow: -100px 0 0 100px blue;
+          box-shadow: -100px 0 0 100px blue;
 }
 /*# sourceMappingURL=main.css.map */
