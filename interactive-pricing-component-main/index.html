@@ -15,15 +15,15 @@
       <h2>Sign-up for our 30-day trial. No credit card required.</h2>
     </header> 
 
-    <section>
-      <p>Pageviews</p>
+    <section class="price">
+      <p id="pageviews"><span>100k</span> Pageviews</p>
       <div class="slider">
         <label for="slider">
           <input type="range" name="price" id="background-slider" min="0" max="20" step="5" value="0">
           <input type="range" name="price" id="slider" min="0" max="20" step="5" value="0">
         </label>
       </div>
-      <p>$ /month</p>
+      <p id="final-price-p"><span id="final-price">$16</span>/month</p>
       <div class="cycle">
         <label for="billing-cycle">
           <p>Monthly Billing</p>
@@ -31,12 +31,12 @@
             <input type="checkbox" name="billing" id="billing-cycle">
             <span></span>
           </div>
-          <p>Yearly Billing 25% discount</p>
+          <p id="discount-message">Yearly Billing <span id="discount-value">$25<span id="discount-word"> discount</span></span></p>
         </label>
       </div>      
     </section>
   
-    <section>
+    <section class="benefits">
       <ul>
         <li><span class="check-icon"><img src="./images/icon-check.svg" alt="check icon"></span>Unlimited websites</li>
         <li><span class="check-icon"><img src="./images/icon-check.svg" alt="check icon"></span>100% data ownership</li>
