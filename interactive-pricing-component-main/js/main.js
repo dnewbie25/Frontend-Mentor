@@ -2,17 +2,14 @@
 
 // style for the slider in chrome and edge
 const slider = document.getElementById('slider');
-let sliderValue = 0;
-slider.style.setProperty("--value", 0);
-slider.addEventListener('input', ()=>{
-  sliderValue = slider.value;
-  slider.style.setProperty("--value", sliderValue);
+const backgroundSlider = document.getElementById('background-slider');
+const sliderDiv =document.querySelector('.slider');
+
+
+slider.addEventListener('input',()=>{
+  backgroundSlider.value = slider.value;
 });
 
-const r1 = document.getElementById("r1");
-const r2 = document.getElementById("r2");
+// set slider width
 
-r1.addEventListener("input", () => {
-  r2.value = r1.value;
-  console.log(r1, r2);
-});
+slider.style.width = sliderDiv.offsetWidth;

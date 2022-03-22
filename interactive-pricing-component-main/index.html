@@ -14,22 +14,23 @@
       <h1>Simple, traffic-based pricing</h1>
       <h2>Sign-up for our 30-day trial. No credit card required.</h2>
     </header> 
-    <div class="container">
-      <input type="range" min="0" max="20" value="0" id="r2">
-      <input type="range" min="0" max="20" value="0" id="r1">
-    </div>
+
     <section>
       <p>Pageviews</p>
       <div class="slider">
         <label for="slider">
+          <input type="range" name="price" id="background-slider" min="0" max="20" step="5" value="0">
           <input type="range" name="price" id="slider" min="0" max="20" step="5" value="0">
         </label>
       </div>
       <p>$ /month</p>
-      <div>
+      <div class="cycle">
         <label for="billing-cycle">
           <p>Monthly Billing</p>
-          <input type="checkbox" name="billing" id="billing-cycle">
+          <div id="cycle-switch">
+            <input type="checkbox" name="billing" id="billing-cycle">
+            <span></span>
+          </div>
           <p>Yearly Billing 25% discount</p>
         </label>
       </div>      
@@ -37,9 +38,9 @@
   
     <section>
       <ul>
-        <li>Unlimited websites</li>
-        <li>100% data ownership</li>
-        <li>Email reports</li>
+        <li><span class="check-icon"><img src="./images/icon-check.svg" alt="check icon"></span>Unlimited websites</li>
+        <li><span class="check-icon"><img src="./images/icon-check.svg" alt="check icon"></span>100% data ownership</li>
+        <li><span class="check-icon"><img src="./images/icon-check.svg" alt="check icon"></span>Email reports</li>
       </ul>
       <button>Start my trial</button>
     </section>

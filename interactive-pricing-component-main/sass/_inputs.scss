@@ -2,13 +2,6 @@
 
 // slider style
 
-#slider {
-  appearance: none;
-  width: 100%;
-  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
-  transition: all 180ms;
-}
-
 @mixin thumb_hover {
   appearance: none;
   background-image: none;
@@ -49,61 +42,148 @@
   height: 6px;
 }
 
-// progress
-//background-color: #4c515126;
-// height: 6px;
-//track
-// appearance: none;
-// background-color: #4c515126;
-// height: 6px;
+.slider {
+  height: 50px;
+  width: 100%;
+}
 
-// thumb styles
-#slider::-moz-range-thumb {
+.slider label{
+  width: 100%;
+  position: relative;
+  display: block;
+  input{
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    height: 7px;
+    border-radius: 7px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    transition: all 180ms;
+  }
+}
+
+#slider{
+  background-color: transparent;
+}
+
+#background-slider{
+  overflow: hidden;
+}
+
+// firefox
+#slider::-moz-range-track{
+  background-color: transparent;
+}
+#slider::-moz-range-thumb{
   @include thumb;
-
   &:hover,
-  &:active {
+  &:active{
+    @include thumb_hover;
+  }
+}
+#background-slider::-moz-range-thumb{
+  @include thumb;
+}
+
+#background-slider::-moz-range-track{
+  height: 10px;
+  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
+}
+#background-slider::-moz-range-thumb{
+  width: 25px;
+  box-shadow: -1000px 0 0 1000px $Soft-Cyan-Full-Slider-Bar;
+}
+
+// chrome test
+#slider::-webkit-slider-runnable-track{
+  background-color: transparent;
+}
+#slider::-webkit-slider-thumb{
+  @include thumb;
+  &:hover,
+  &:active{
     @include thumb_hover;
   }
 }
 
-#slider::-ms-thumb {
-  @include thumb;
+#background-slider::-webkit-slider-runnable-track{
+  height: 100%;
+  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
+}
+#background-slider::-webkit-slider-thumb{
+  width: 25px;
+  box-shadow: -1000px 0 0 1000px $Soft-Cyan-Full-Slider-Bar;
+}
 
-  &:hover,
-  &:active {
+// EDGE
+
+#slider::-ms-track{
+  background-color: transparent;
+}
+#slider::-ms-thumb{
+  @include thumb;
+  &:hover{
     @include thumb_hover;
   }
 }
-
-#slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  margin-top: -14px;
+#background-slider::-ms-thumb{
   @include thumb;
-  &:hover,
-  &:active {
-    @include thumb_hover;
+}
+
+#background-slider::-ms-track{
+  height: 10px;
+  background-color: $Light-Grayish-Blue-Empty-Slider-Bar;
+}
+#background-slider::-ms-thumb{
+  width: 25px;
+  box-shadow: -1000px 0 0 1000px $Soft-Cyan-Full-Slider-Bar;
+}
+
+// toggle button
+
+#cycle-switch{
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  span{
+    transition: all 180ms;
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $Light-Grayish-Blue-Toggle-Background;
+    border-radius: 10px;
+  }
+  span:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2.5px;
+    top: 2.5px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 180ms;
+  }
+  input:hover, span:hover{
+      background-color: $Soft-Cyan-Full-Slider-Bar;
+  }
+  input:checked + span{
+    background-color: $Strong-Cyan-Slider-Backround;
+  }
+  input:checked + span:before{
+    transform: translateX(15px);
   }
 }
 
-// track and progress
-#slider::-moz-range-track {
-  @include track;
-}
-
-#slider::-ms-track {
-  @include track;
-  &::-ms-fill-lower {
-    @include progress;
-  }
-}
-
-#slider::-webkit-slider-runnable-track {
-  @include track;
-  box-shadow: 1px 0 0 calc(100% - var("--value")) inset red;
-  
-}
-
-#slider::-moz-range-progress {
-  @include progress;
-}

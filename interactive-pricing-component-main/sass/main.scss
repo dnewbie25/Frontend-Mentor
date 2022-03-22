@@ -10,10 +10,54 @@ html {
   width: 100%;
   font-family: $font;
   font-size: $size;
+  overflow: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main{
+  background-image: url("./../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
   margin: 2rem;
+  max-width: 1100px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  *{
+    width: 100%;
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+li img{
+  width: 1rem;
+  margin-right: 10px;
+}
+
+header{
+  margin: 2rem;
+  text-align: center;
+  h1{
+    font-size: 2rem;
+    font-weight: $weight-2;
+    color: $Dark-Desaturated-Blue-Text-CTA-Background;
+    margin-bottom: 1rem;
+  }
+  h2{
+    font-size: 1rem;
+    font-weight: $weight-1;
+    color: $Grayish-Blue-Text;
+  }
 }
 
 .attribution {
@@ -23,55 +67,4 @@ main{
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-// test slider -  all right, replicate with only chrome stuff
-
-.container {
-  position: relative;
-  input {
-    appearance:none;
-    position: absolute;
-  }
-}
-
-#r1{
-  background-color: transparent;
-}
-
-#r2{
-  overflow: hidden;
-}
-
-#r1::-moz-range-track{
-  background-color: transparent;
-}
-#r1::-moz-range-thumb{
-  width: 25px;
-}
-
-#r2::-moz-range-track{
-  height: 100%;
-background-color: red;
-}
-#r2::-moz-range-thumb{
-  width: 25px;
-box-shadow: -100px 0 0 100px blue;
-}
-
-// chrome test
-#r1::-webkit-slider-runnable-track{
-  background-color: transparent;
-}
-#r1::-webkit-slider-thumb{
-  width: 25px;
-}
-
-#r2::-webkit-slider-runnable-track{
-  height: 100%;
-background-color: red;
-}
-#r2::-webkit-slider-thumb{
-  width: 25px;
-box-shadow: -100px 0 0 100px blue;
 }
