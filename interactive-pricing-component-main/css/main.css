@@ -481,6 +481,17 @@ header h2 {
 
 .price .cycle #discount-message span {
   color: #ff8c66;
+  position: relative;
+}
+
+@media (max-width: 549px) {
+  .price .cycle #discount-message span::before {
+    content: "-";
+    position: absolute;
+    top: 1px;
+    left: -8px;
+    font-size: 1rem;
+  }
 }
 
 .price .cycle #discount-message span #discount-word {
