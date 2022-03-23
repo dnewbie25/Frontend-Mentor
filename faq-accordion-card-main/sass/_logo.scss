@@ -1,0 +1,39 @@
+@import "./config";
+
+img{
+  display: none;
+}
+
+.image-space{
+  position: relative;
+  height: 9rem;
+  &__mobile{
+    position: absolute;
+    width: 333px;
+    display: block;
+    top: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%,-30%);
+    z-index: 3;
+  }
+  @media (min-width:700px) {
+    &__mobile{
+      width: 300px;
+      top: 50%;
+      transform: translate(-33%, -50%);
+      left: 0;
+      position: relative;
+      z-index: 2;
+    }
+    &::before{
+      content: '';
+      width: 100px;
+      height: 120px;
+      position: absolute;
+      z-index: 4;
+      top: 40%;
+      left: -20.15%;
+    }
+  }
+}

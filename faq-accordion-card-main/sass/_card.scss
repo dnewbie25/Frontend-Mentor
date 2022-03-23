@@ -1,0 +1,139 @@
+@import "./config";
+
+.card-space{
+  // width: 600px;
+  transition: all 200ms;
+  &__card{ 
+    button{
+      font-family: $font;
+      margin-bottom: 1rem;
+      width: 100%;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      cursor: pointer;
+      h2{
+        font-size: 0.9rem;
+        font-weight: $weight-1;
+        color: $Dark-grayish-blue;
+      }
+      img{
+        margin-left: 1rem;
+        display: block;
+        width: 0.7rem;
+        transition: all ease-out;
+        &.up{
+          transform: rotate(180deg);
+        }
+      }
+      h2{
+        transition: all 180ms;
+        &.active{
+          font-weight: $weight-2;
+          color: $Very-dark-grayish-blue;
+        }
+      }
+      // for active sections
+      // h2{
+      //   font-weight: $weight-2;
+      //   color: $Very-dark-grayish-blue;
+      // }
+      &:hover{
+        background-color: $Light-grayish-blue;
+        h2{
+          color: $Soft-red;
+        }
+        .arrowDown{
+          animation-duration: 1000ms;
+          animation-name: arrowDown;
+        }
+        .arrowUp{
+          animation-duration: 1000ms;
+          animation-name: arrowUp;
+        }
+      }
+    }
+    p{
+      font-size: 12px;
+      max-height: 0;
+      width: 100%;
+      text-align: left;
+      color: $Dark-grayish-blue;
+      visibility: hidden;
+      &.visible{
+        animation-duration: 200ms;
+        animation-name: visible;
+        padding: 0 1rem;
+        margin: 1rem 0 2rem 0;
+      }
+      &.invisible{
+        animation-duration: 200ms;
+        animation-name: invisible;
+        visibility: hidden;
+        padding: 0 1rem;
+        margin: 0;
+      }
+    }
+  }
+}
+// rotate the image 180 deg with JS when clicked and add the classes
+
+@keyframes arrowDown {
+  0%{
+    transform: rotate(0deg);
+  }
+  33%{
+    transform: rotate(-45deg);
+  }
+  66%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes arrowUp {
+  0%{
+    transform: rotate(180deg);
+    scale: 0.2;
+  }
+  33%{
+    scale: 0.5;
+    transform: rotate(135deg);
+  }
+  66%{
+    scale: 0.7;
+    transform: rotate(225deg);
+  }
+  100%{
+    scale: 1;
+    transform: rotate(180deg);
+  }
+}
+// with p make display block and none
+@keyframes visible {
+  0%{
+    max-height: 1px;
+  }
+  50%{
+    max-height: 25px;
+  }
+  100%{
+    max-height: 2rem;
+  }
+}
+
+@keyframes invisible {
+  0%{
+    max-height: 2rem;
+  }
+  50%{
+    max-height: 25px;
+  }
+  100%{
+    max-height: 0px;
+  }
+}
