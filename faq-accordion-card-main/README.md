@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://github.com/dnewbie25/Frontend-Mentor/tree/main/faq-accordion-card-main)
+- [Live Site URL](https://faq-accordion-by-me.netlify.app)
 
 ## My process
 
@@ -44,13 +44,14 @@ Users should be able to:
 
 ### What I learned
 
-Using CSS animations and how to activate them with Javascript.
+Using CSS animations and how to activate them with Javascript to create the accordion. Absolute positioning was a recurrent topic in this challenge.
 
 ### Useful resources
 
 - [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp) 
+- [Using CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@dnewbie25](https://www.frontendmentor.io/profile/dnewbie25)
+- DevChallenges - [dnewbie25](https://devchallenges.io/portfolio/dnewbie25)

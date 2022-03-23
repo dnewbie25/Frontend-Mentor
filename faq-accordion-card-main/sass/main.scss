@@ -66,8 +66,12 @@ main{
         border-radius: 1rem 0 0 1rem;
       }
       &.card-space{
+        padding-top: 5rem;
         overflow-y: scroll;
         scrollbar-width: none;
+        &::-webkit-scrollbar{
+          display: none;
+        }
         height: 100%;
         border-radius: 0 1rem 1rem 0;
       }

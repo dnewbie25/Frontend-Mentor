@@ -369,10 +369,14 @@ main .pattern--mobile {
     border-radius: 1rem 0 0 1rem;
   }
   main article.card-space {
+    padding-top: 5rem;
     overflow-y: scroll;
     scrollbar-width: none;
     height: 100%;
     border-radius: 0 1rem 1rem 0;
+  }
+  main article.card-space::-webkit-scrollbar {
+    display: none;
   }
   main .pattern--mobile {
     display: none;
