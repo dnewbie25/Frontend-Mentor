@@ -45,3 +45,8 @@ Time Tracking Dashboard
 
   * [Live Site](https://time-tracking-dashboard-by-me.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/time-tracking-dashboard-main)
+
+Interactive Price Component
+
+  * [Live Site](https://sliding-price-component.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/interactive-pricing-component-main)
