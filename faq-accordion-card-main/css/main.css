@@ -386,8 +386,6 @@ main .pattern--mobile {
     z-index: 4;
     position: absolute;
     width: 300px;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#615f5f1f));
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #615f5f1f);
     top: 15%;
     left: -10%;
   }
