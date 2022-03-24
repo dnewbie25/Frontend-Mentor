@@ -21,6 +21,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: left;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -51,10 +52,6 @@
 .card-space__card button h2.active {
   font-weight: 700;
   color: #4a4b5e;
-}
-
-.card-space__card button:hover {
-  background-color: #e7e7e9;
 }
 
 .card-space__card button:hover h2 {

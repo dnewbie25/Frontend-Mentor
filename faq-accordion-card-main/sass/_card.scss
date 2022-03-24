@@ -13,6 +13,7 @@
       justify-content: space-between;
       align-items: center;
       text-align: left;
+      background-color: transparent;
       cursor: pointer;
       h2{
         font-size: 0.9rem;
@@ -35,13 +36,8 @@
           color: $Very-dark-grayish-blue;
         }
       }
-      // for active sections
-      // h2{
-      //   font-weight: $weight-2;
-      //   color: $Very-dark-grayish-blue;
-      // }
       &:hover{
-        background-color: $Light-grayish-blue;
+        // background-color: $Light-grayish-blue;
         h2{
           color: $Soft-red;
         }
