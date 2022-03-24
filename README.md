@@ -50,3 +50,8 @@ Interactive Price Component
 
   * [Live Site](https://sliding-price-component.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/interactive-pricing-component-main)
+
+FAQ Accordion
+
+  * [Live Site](https://faq-accordion-by-me.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/faq-accordion-card-main)
