@@ -1,0 +1,93 @@
+@import "./config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  font-family: $font;
+  font-weight: $weight;
+  font-size: 16px;
+  background-color: $Dark-Blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  background-color: $Dark-Grayish-Blue;
+  max-width: 80%;
+  height: auto;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem 2rem 0 2rem;
+  h1{
+    font-size: 0.8rem;
+    color: $Neon-Green;
+  }
+}
+
+
+#quote{
+  color: $Light-Cyan;
+  margin: 1rem 0;
+  font-size: $quote-size;
+}
+
+#divider{
+  background: url("./../images/pattern-divider-mobile.svg") no-repeat center;
+  width: 100%;
+  height: 20px;
+  margin: 2rem 0;
+}
+
+#dice{
+  justify-self: center;
+  align-self: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: $Neon-Green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all 180ms;
+  &__image{
+    background: url("./../images/icon-dice.svg") no-repeat center;
+    width: 25px;
+    height: 25px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 20px $Neon-Green;
+  }
+  &:active{
+    box-shadow: 0px 0px 5px $Neon-Green;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+  margin-top: 3rem;
+}
+
+.attribution a {
+  color: $Neon-Green;
+}
