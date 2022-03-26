@@ -55,3 +55,8 @@ FAQ Accordion
 
   * [Live Site](https://faq-accordion-by-me.netlify.app)
   * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/faq-accordion-card-main)
+
+Advice Generator
+
+  * [Live Site](https://advices-random-generator.netlify.app)
+  * [Repository](https://github.com/dnewbie25/Frontend-Mentor/tree/main/advice-generator-app-main)
