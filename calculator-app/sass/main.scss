@@ -1,18 +1,88 @@
 @import "config";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+input,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,25 +91,44 @@ time, mark, audio, video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -47,33 +136,36 @@ table {
 
 // basic styles before color schemes
 
-body{
+body {
   font-size: $numbers-size;
   display: flex;
+  font-family: $font;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 1em 0;
 }
 
-main{
-  max-width: 1000px;
-  > * {
-    margin: 1em;
+main {
+  width: min(500px, 95%);
+  >* {
+    margin: 1em 0.4em;
   }
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: $text-white-1;
   font-family: $font;
-  h1{
-    font-size: 0.9em;
+
+  h1 {
+    font-size: 2rem;
     font-weight: 700;
   }
 
-  .triple-toggle{
+  .triple-toggle {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -82,13 +174,15 @@ nav{
     border: 2px solid $toggle-color-1;
     border-radius: 50px;
     background-color: $toggle-color-1;
-    label{
+
+    label {
       position: relative;
-      font-size: 0.4em;
-      top: -1.5em;
+      font-size: 0.8rem;
+      top: -1.8em;
       right: -0.9em;
     }
-    input{
+
+    input {
       margin: 0 auto;
       appearance: none;
       height: 20px;
@@ -98,9 +192,169 @@ nav{
       color: $key-red-1;
       cursor: pointer;
       opacity: 0;
-      &:checked{
+
+      &:checked {
         opacity: 1;
       }
+    }
+  }
+}
+
+#screen {
+  input{
+    padding: 0.7em 0.2em;
+  font-weight: 700;
+  text-align: right;
+  background-color: $screen-color-1;
+  border-radius: 10px;
+    appearance: none;
+    appearance: textfield;
+    font-size: 2rem;
+    width: 100%;
+    background-color: $screen-color-1;
+    color: $text-white-1;
+    text-align: right;
+    border: none;
+    &:focus{
+      outline: $toggle-color-1 solid 2px;
+    }
+  }
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+}
+
+#numpad {
+  background-color: $toggle-color-1;
+  border-radius: 10px;
+  padding: 0.3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "seven eight nine del"
+    "four five six add"
+    "one two three subs"
+    "dot zero divide multiply"
+    "reset reset equal equal"
+  ;
+  gap: 0.3em 0.3em;
+  button{
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: $font;
+    font-weight: 700;
+    padding: 0.2em;
+    box-shadow: 0 0.1em 0 $key-gray-shadow-1;
+    color: $keys-1;
+    &:hover{
+      background-color: $text-white-1;
+    }
+    &:active{
+      background-color: $key-gray-shadow-1;
+    }
+  }
+
+  #button0 {
+    grid-area: zero;
+  }
+
+  #button1 {
+    grid-area: one;
+  }
+
+  #button2 {
+    grid-area: two;
+  }
+
+  #button3 {
+    grid-area: three;
+  }
+
+  #button4 {
+    grid-area: four;
+  }
+
+  #button5 {
+    grid-area: five;
+  }
+
+  #button6 {
+    grid-area: six;
+  }
+
+  #button7 {
+    grid-area: seven;
+  }
+
+  #button8 {
+    grid-area: eight;
+  }
+
+  #button9 {
+    grid-area: nine;
+  }
+
+  #del {
+    grid-area: del;
+    background-color: $keys-1;
+    color: $text-white-1;
+    box-shadow: 0 0.1em 0 $keys-shadow-1;
+    &:hover{
+      background-color: hsl(225, 44%, 67%);
+    }
+    &:active{
+      background-color: $keys-1;
+    }
+  }
+
+  #add {
+    grid-area: add;
+  }
+
+  #substract {
+    grid-area: subs;
+  }
+
+  #divide {
+    grid-area: divide;
+  }
+
+  #multiply {
+    grid-area: multiply;
+  }
+
+  #dot {
+    grid-area: dot;
+  }
+
+  #reset {
+    grid-area: reset;
+    background-color: $keys-1;
+    color: $text-white-1;
+    box-shadow: 0 0.1em 0 $keys-shadow-1;
+    &:hover{
+      background-color: hsl(225, 44%, 67%);
+    }
+    &:active{
+      background-color: $keys-1;
+    }
+  }
+
+  #equal {
+    grid-area: equal;
+    background-color: $key-red-1;
+    color: $text-white-1;
+    box-shadow: 0 0.1em 0 $key-red-shadow-1;
+    &:hover{
+      background-color: hsl(6, 67%, 62%);
+    }
+    &:active{
+      background-color: $key-red-1;
     }
   }
 }
@@ -108,7 +362,17 @@ nav{
 // theme 1 - dark
 
 @media (prefers-color-scheme: dark) {
-  main {
+  body,main {
     background-color: $main-color-1;
+  }
+}
+
+// footer
+footer{
+  font-size: 0.5em;
+  color: $text-white-1;
+  justify-self: flex-end;
+  a{
+    color: $screen-color-1;
   }
 }

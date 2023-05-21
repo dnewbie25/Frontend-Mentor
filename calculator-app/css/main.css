@@ -1,17 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;700&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+input,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -22,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -31,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -53,27 +136,29 @@ table {
 body {
   font-size: 32px;
   display: flex;
+  font-family: "League Spartan", sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 1em 0;
 }
 
 main {
-  max-width: 1000px;
+  width: min(500px, 95%);
 }
 main > * {
-  margin: 1em;
+  margin: 1em 0.4em;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: hsl(0, 0%, 100%);
   font-family: "League Spartan", sans-serif;
 }
 nav h1 {
-  font-size: 0.9em;
+  font-size: 2rem;
   font-weight: 700;
 }
 nav .triple-toggle {
@@ -88,8 +173,8 @@ nav .triple-toggle {
 }
 nav .triple-toggle label {
   position: relative;
-  font-size: 0.4em;
-  top: -1.5em;
+  font-size: 0.8rem;
+  top: -1.8em;
   right: -0.9em;
 }
 nav .triple-toggle input {
@@ -109,8 +194,153 @@ nav .triple-toggle input:checked {
   opacity: 1;
 }
 
+#screen input {
+  padding: 0.7em 0.2em;
+  font-weight: 700;
+  text-align: right;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  font-size: 2rem;
+  width: 100%;
+  background-color: hsl(224, 36%, 15%);
+  color: hsl(0, 0%, 100%);
+  text-align: right;
+  border: none;
+}
+#screen input:focus {
+  outline: hsl(223, 31%, 20%) solid 2px;
+}
+#screen input::-webkit-outer-spin-button,
+#screen input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#numpad {
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 10px;
+  padding: 0.3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "seven eight nine del" "four five six add" "one two three subs" "dot zero divide multiply" "reset reset equal equal";
+  gap: 0.3em 0.3em;
+}
+#numpad button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  padding: 0.2em;
+  box-shadow: 0 0.1em 0 hsl(28, 16%, 65%);
+  color: hsl(225, 21%, 49%);
+}
+#numpad button:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+#numpad button:active {
+  background-color: hsl(28, 16%, 65%);
+}
+#numpad #button0 {
+  grid-area: zero;
+}
+#numpad #button1 {
+  grid-area: one;
+}
+#numpad #button2 {
+  grid-area: two;
+}
+#numpad #button3 {
+  grid-area: three;
+}
+#numpad #button4 {
+  grid-area: four;
+}
+#numpad #button5 {
+  grid-area: five;
+}
+#numpad #button6 {
+  grid-area: six;
+}
+#numpad #button7 {
+  grid-area: seven;
+}
+#numpad #button8 {
+  grid-area: eight;
+}
+#numpad #button9 {
+  grid-area: nine;
+}
+#numpad #del {
+  grid-area: del;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0.1em 0 hsl(224, 28%, 35%);
+}
+#numpad #del:hover {
+  background-color: hsl(225, 44%, 67%);
+}
+#numpad #del:active {
+  background-color: hsl(225, 21%, 49%);
+}
+#numpad #add {
+  grid-area: add;
+}
+#numpad #substract {
+  grid-area: subs;
+}
+#numpad #divide {
+  grid-area: divide;
+}
+#numpad #multiply {
+  grid-area: multiply;
+}
+#numpad #dot {
+  grid-area: dot;
+}
+#numpad #reset {
+  grid-area: reset;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0.1em 0 hsl(224, 28%, 35%);
+}
+#numpad #reset:hover {
+  background-color: hsl(225, 44%, 67%);
+}
+#numpad #reset:active {
+  background-color: hsl(225, 21%, 49%);
+}
+#numpad #equal {
+  grid-area: equal;
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0.1em 0 hsl(6, 70%, 34%);
+}
+#numpad #equal:hover {
+  background-color: hsl(6, 67%, 62%);
+}
+#numpad #equal:active {
+  background-color: hsl(6, 63%, 50%);
+}
+
 @media (prefers-color-scheme: dark) {
-  main {
+  body, main {
     background-color: hsl(222, 26%, 31%);
   }
+}
+footer {
+  font-size: 0.5em;
+  color: hsl(0, 0%, 100%);
+  justify-self: flex-end;
+}
+footer a {
+  color: hsl(224, 36%, 15%);
 }/*# sourceMappingURL=main.css.map */
