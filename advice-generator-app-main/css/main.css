@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -17,25 +16,16 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
   font-size: 16px;
-  background-color: #1f2632;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: hsl(218, 23%, 16%);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   margin: 1rem;
-  background-color: #323a49;
+  background-color: hsl(217, 19%, 24%);
   max-width: 648px;
   height: auto;
   border-radius: 1rem;
@@ -43,16 +33,15 @@ main {
   padding: 2rem 2rem 0 2rem;
   position: relative;
 }
-
 main h1 {
   font-size: 0.8rem;
-  color: #52ffa8;
+  color: hsl(150, 100%, 66%);
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 #quote {
-  color: #cee3e9;
+  color: hsl(193, 38%, 86%);
   margin: 1rem 0;
   font-size: 28px;
 }
@@ -63,7 +52,6 @@ main h1 {
   height: 20px;
   margin: 2rem 0 3rem 0;
 }
-
 @media (min-width: 485px) {
   #divider {
     background: url("./../images/pattern-divider-desktop.svg") no-repeat center;
@@ -74,41 +62,28 @@ main h1 {
   position: absolute;
   bottom: -28px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
-  background-color: #52ffa8;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: hsl(150, 100%, 66%);
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 100ms;
   transition: all 100ms;
 }
-
 #dice__image {
   background: url("./../images/icon-dice.svg") no-repeat center;
   width: 25px;
   height: 25px;
 }
-
 #dice:hover {
-  -webkit-box-shadow: 0px 0px 30px #52ffa8;
-          box-shadow: 0px 0px 30px #52ffa8;
+  box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
 }
-
 #dice:active {
-  -webkit-box-shadow: 0px 0px 5px #52ffa8;
-          box-shadow: 0px 0px 5px #52ffa8;
+  box-shadow: 0px 0px 5px hsl(150, 100%, 66%);
 }
 
 .attribution {
@@ -120,14 +95,7 @@ main h1 {
 }
 
 .attribution a {
-  color: #52ffa8;
-}
-
-@-webkit-keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 -35px;
-  }
+  color: hsl(150, 100%, 66%);
 }
 
 @keyframes typing {
@@ -135,5 +103,4 @@ main h1 {
     left: 100%;
     margin: 0 -35px 0 -35px;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

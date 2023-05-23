@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,55 +14,34 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   height: 100%;
-  background-color: #ff7a7a;
+  background-color: hsl(0, 100%, 74%);
   background-image: url("./../images/bg-intro-mobile.png");
 }
-
 @media (min-width: 750px) {
   body {
     background-image: url("./../images/bg-intro-desktop.png");
   }
 }
-
 body main {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-
 @media (min-width: 750px) {
   body main {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: 80px calc(100% - 80px);
-        grid-template-rows: 80px calc(100% - 80px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 80px calc(100% - 80px);
     row-gap: 16px;
-        grid-template-areas: "head head banner banner" "head head form form";
+    grid-template-areas: "head head banner banner" "head head form form";
   }
   body main .head {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: head;
     margin-top: calc(50% - 237px);
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
   body main .head .title {
@@ -79,27 +57,18 @@ body main {
     width: 100%;
   }
   body main .banner {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
     grid-area: banner;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
+    align-self: start;
     margin: 0;
   }
   body main .banner span {
     display: inline;
   }
   body main .form {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
     grid-area: form;
     margin-top: 0;
   }
 }
-
 body * {
   padding: 1rem;
 }
@@ -108,13 +77,11 @@ body * {
   text-align: center;
   color: white;
 }
-
 .head .title {
   font-size: 1.5rem;
   margin: 2rem;
   font-weight: 700;
 }
-
 .head .subtitle {
   font-size: 1rem;
   font-weight: 400;
@@ -123,16 +90,14 @@ body * {
 
 .banner {
   font-weight: 700;
-  background-color: #6055a5;
+  background-color: hsl(248, 32%, 49%);
   color: white;
   text-align: center;
   margin: 1rem;
   width: 85%;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 7px 5px rgba(167, 73, 73, 0.733);
-          box-shadow: 0px 7px 5px rgba(167, 73, 73, 0.733);
+  box-shadow: 0px 7px 5px hsla(0, 39%, 47%, 0.733);
 }
-
 .banner span {
   font-weight: 400;
   padding: 0;
@@ -144,91 +109,74 @@ body * {
   color: black;
   width: 85%;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 7px 10px rgba(167, 73, 73, 0.733);
-          box-shadow: 0px 7px 10px rgba(167, 73, 73, 0.733);
+  box-shadow: 0px 7px 10px hsla(0, 39%, 47%, 0.733);
 }
-
 .form div {
   width: 100%;
   padding: 0;
   height: auto;
   position: relative;
 }
-
 .form div img, .form div span {
   display: none;
   position: absolute;
 }
-
 .form div img {
   right: 0;
   top: 0;
 }
-
 .form div span {
   font-size: 0.7rem;
-  color: #ff7a7a;
+  color: hsl(0, 100%, 74%);
   right: 0;
   bottom: -10px;
 }
-
 .form input {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 1.5rem;
   width: 100%;
-  border: 2px solid #b9b6d3;
+  border: 2px solid hsl(246, 25%, 77%);
   border-radius: 7px;
   font-size: 1rem;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
-
 .form input:focus {
   outline: none;
 }
-
 .form #submit {
   display: block;
   margin: 0 auto;
-  background-color: #38cc8c;
+  background-color: hsl(154, 59%, 51%);
   border-radius: 10px;
   color: white;
   border: none;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   padding: 1.5rem 0;
-  -webkit-box-shadow: 0px 5px 3px rgba(38, 125, 87, 0.527);
-          box-shadow: 0px 5px 3px rgba(38, 125, 87, 0.527);
+  box-shadow: 0px 5px 3px hsla(154, 53%, 32%, 0.527);
   font-weight: 600;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
-
 .form #submit:hover {
-  background-color: rgba(56, 204, 140, 0.801);
-  -webkit-box-shadow: 0px 5px 3px rgba(114, 238, 184, 0.596);
-          box-shadow: 0px 5px 3px rgba(114, 238, 184, 0.596);
+  background-color: hsla(154, 59%, 51%, 0.801);
+  box-shadow: 0px 5px 3px hsla(154, 78%, 69%, 0.596);
   cursor: pointer;
 }
-
 .form .disclosure {
   display: block;
   text-align: center;
   font-size: 0.7rem;
-  color: #b9b6d3;
+  color: hsl(246, 25%, 77%);
 }
-
 .form .disclosure .terms {
   text-decoration: none;
-  color: #ff7a7a;
+  color: hsl(0, 100%, 74%);
   font-weight: 700;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
-
 .form .disclosure .terms:hover {
-  color: #c05959;
+  color: hsl(0, 45%, 55%);
 }
 
 .attribution {
@@ -239,6 +187,5 @@ body * {
 }
 
 .attribution a {
-  color: #3e52a3;
-}
-/*# sourceMappingURL=main.css.map */
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

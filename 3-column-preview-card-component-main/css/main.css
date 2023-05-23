@@ -1,103 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 .card {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   padding: 2rem;
   font-family: "Lexend Deca", sans-serif;
-  color: #f2f2f2;
+  color: hsl(0, 0%, 95%);
 }
-
 .card__image {
   margin-bottom: 12px;
 }
-
 .card h2 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Big Shoulders Display", cursive;
   margin: 12px 0;
 }
-
 .card p {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   font-size: 0.8rem;
   margin-bottom: 2rem;
 }
-
 .card button {
   justify-self: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-preferred-size: max-content;
-      flex-basis: max-content;
+  align-items: flex-start;
+  flex-basis: max-content;
   max-width: 145px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   font-family: "Lexend Deca", sans-serif;
   border: none;
-  background: #f2f2f2;
-  border: 2px solid #f2f2f2;
+  background: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
   padding: 0.7rem 1rem;
   border-radius: 2rem;
   cursor: pointer;
-  -webkit-transition: all 300ms;
   transition: all 300ms;
 }
-
 .card.sedan {
-  background-color: #e38826;
+  background-color: hsl(31, 77%, 52%);
 }
-
 .card.sedan button {
-  color: #e38826;
+  color: hsl(31, 77%, 52%);
 }
-
 .card.sedan button:hover {
   background-color: transparent;
-  color: #f2f2f2;
+  color: hsl(0, 0%, 95%);
 }
-
 .card.suv {
-  background-color: #006970;
+  background-color: hsl(184, 100%, 22%);
 }
-
 .card.suv button {
-  color: #006970;
+  color: hsl(184, 100%, 22%);
 }
-
 .card.suv button:hover {
   background-color: transparent;
-  color: #f2f2f2;
+  color: hsl(0, 0%, 95%);
 }
-
 .card.luxury {
-  background-color: #004241;
+  background-color: hsl(179, 100%, 13%);
 }
-
 .card.luxury button {
-  color: #004241;
+  color: hsl(179, 100%, 13%);
 }
-
 .card.luxury button:hover {
   background-color: transparent;
-  color: #f2f2f2;
+  color: hsl(0, 0%, 95%);
 }
-
 @media (min-width: 600px) {
   .card button {
     margin-top: 2.5rem;
@@ -107,40 +77,24 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-size: 15px;
-  background-color: #f2f2f2;
+  background-color: hsl(0, 0%, 95%);
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
 @media (max-width: 600px) {
   body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -154,26 +108,14 @@ main {
 .cards {
   overflow: hidden;
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media (max-width: 600px) {
   .cards {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    justify-self: center;
+    align-self: flex-start;
     margin: 1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
