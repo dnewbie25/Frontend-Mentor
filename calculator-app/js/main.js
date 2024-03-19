@@ -5,9 +5,9 @@ let screen = document.getElementById('display');
 let result = 0;
 let operationBtnPressed = false;
 let currentOperation = '';
-window.onload = function() {
+window.onload = function () {
   screen.focus();
- };
+};
 // add event listener to the numbers, when clicked, appear at the end of the screen
 numberButtons.forEach(button => {
   button.addEventListener('click', e => {
@@ -18,43 +18,52 @@ numberButtons.forEach(button => {
 
 //event listener for the dot
 let dot = document.getElementById('dot');
-dot.addEventListener('click',e=>{
-  screen.value = String(screen.value)+e.target.textContent
+dot.addEventListener('click', e => {
+  screen.value = String(screen.value) + e.target.textContent
 })
 
 //all other keyboards
 let delBtn = document.getElementById('del');
-delBtn.addEventListener('click', ()=>screen.value="")
+delBtn.addEventListener('click', () => { screen.value = ""; result = 0 })
+
+let resetBtn = document.getElementById('reset');
+resetBtn.addEventListener('click', () => { screen.value = ""; result = 0 })
+
+let equalBtn = document.getElementById('equal');
+equalBtn.addEventListener('click', ()=>{ operate();screen.value = result})
 
 //operations object
 
 let arithmetic = {
-  sum: function sum(prev, current){return prev+current},
-  substract: function subs(prev, current){return prev-current},
-  multiply: function multiply(prev, current){return prev*current},
-  divide: function divide(prev, current){return prev/current}
+  sum: function sum(prev, current) { return prev + current },
+  substract: function subs(prev, current) { return prev - current },
+  multiply: function multiply(prev, current) { return prev * current },
+  divide: function divide(prev, current) { return prev / current }
 }
 
 //operations buttons
 let operationBtns = document.querySelectorAll('.operation_btn');
-let operationsArray = ['+','-','X','/'];
-operationBtns.forEach(button=> button.addEventListener('click', e=>{
-  if (!operationBtnPressed){
+
+operationBtns.forEach(button => button.addEventListener('click', e => {
+  if (!operationBtnPressed) {
     currentOperation = e.target.value;
     result = Number(screen.value);
     screen.value = screen.value + ' ' + e.target.textContent + ' ';
-    console.log(currentOperation);
+    
     operationBtnPressed = true;
-  }else{
-    let newNumber = screen.value.slice(screen.value.indexOf(e.target.textContent,screen.value.length));
-    console.log(newNumber);
-    console.log(currentOperation);
-    screen.value = arithmetic[currentOperation](result,Number(newNumber))
+  } else {
+    operate();
+  }
+}));
+
+function operate(){
+  let newNumber = screen.value.slice(-(screen.value.length - screen.value.indexOf(' ')) + 3);
+    
+    screen.value = arithmetic[currentOperation](result, Number(newNumber))
     result = screen.value;
     operationBtnPressed = false;
     currentOperation = ''
-  }
-}));
+}
 
 
 // add event listener to dot and symbols
