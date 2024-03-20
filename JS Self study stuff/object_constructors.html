@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Constructor & Prototypes</title>
+</head>
+<body>
+  <script>
+    // object construction
+    function Player(name, marker){
+      this.name = name;
+      this.marker=marker;
+      // this.sayName = function(){
+      //   console.log(this.name);
+      // }
+    }
+
+    // const player1=new Player('steve','x');
+    // const player2=new Player('olga','o');
+    // console.log(player1.name);
+    //player1.sayName();
+
+    // construtor for making a book object
+    function Book(title, author, pages,read=false){
+      this.title=title;
+      this.author=author;
+      this.pages=pages;
+      this.read=read;
+      this.info = function(){
+        if(!read){
+          console.log(`${this.title} by ${this.author}, ${this.pages} pages, not read yet!`);
+        }else{
+          console.log(`${this.title} by ${this.author}, ${this.pages} pages, read!`);
+        }
+      }
+    }
+    const theHobbit = new Book('The Hobbit','JRR Tolkien','295',true);
+    theHobbit.info();
+
+    // prototypes
+    function Person(name){
+      this.name=name;
+    }
+    // setting a new function to the Person prototype
+    Person.prototype.sayName=function(){
+      console.log(this.name);
+    }
+
+    const person1=new Person('stevey');
+
+    Object.setPrototypeOf(Player.prototype, Person.prototype);
+    const player3=new Player('steve','x');
+    const player4=new Player('oswald','o');
+    // ALWAYS USE PROTOTYPAL INHERITANCE BEFORE CREATING THE INSTANCE OBJECTS
+    Player.prototype.getMarker=function(){
+      console.log(`${this.name} marker is "${this.marker}"`);
+    }
+
+    player3.sayName();
+    player4.sayName();
+
+    player3.getMarker();
+    player4.getMarker();
+  </script>
+</body>
+</html>
