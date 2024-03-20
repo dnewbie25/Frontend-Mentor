@@ -72,3 +72,7 @@ function showBooks(){
     console.log(item);
   }
 }
+
+function addBookToDOM(book){
+  
+}
