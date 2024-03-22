@@ -94,10 +94,15 @@ function addBookToDOM(book, index){
     deleteBook.classList.add('delete_book_btn');
     bookDiv.setAttribute('book-index',index);
     bookDiv.appendChild(deleteBook);
+    // delete btn listener
+    deleteBook.addEventListener('click', e=>{
+      myLibrary.splice(Number(e.target.parentNode.getAttribute('book-index')),1);
+      showBooks();
+    });
+    // marks as read listener
+    readBtn.addEventListener('change',e=>{
+      myLibrary[Number(e.target.parentNode.getAttribute('book-index'))].read = e.target.checked;
+    })
     return bookDiv;
 }
-// this is a good solution for handling the element deletion
-document.addEventListener('click', e=>{
-  const target = e.target.closest(".delete_book_btn")
-  target.parentNode;
-})
+
