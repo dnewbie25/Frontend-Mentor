@@ -96,8 +96,8 @@ function addBookToDOM(book, index){
     bookDiv.appendChild(deleteBook);
     return bookDiv;
 }
-
+// this is a good solution for handling the element deletion
 document.addEventListener('click', e=>{
   const target = e.target.closest(".delete_book_btn")
-  console.log(target.parentNode);
+  target.parentNode;
 })
