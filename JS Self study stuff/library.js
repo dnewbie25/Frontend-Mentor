@@ -10,7 +10,7 @@ const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('read');
 const form = document.getElementById('form');
-
+const booksParentDiv = document.getElementById('books');
 addBookBtn.addEventListener('click', ()=>{
   modal.showModal();
 });
@@ -23,6 +23,7 @@ form.addEventListener('submit',function(event){
   event.preventDefault();
   addBookToLibrary();
   clearForm();
+  showBooks();
 });
 
 
@@ -68,11 +69,35 @@ function clearForm(){
 }
 
 function showBooks(){
-  for(let item of myLibrary){
-    console.log(item);
+  booksParentDiv.innerHTML="";
+  for(let i=0;i<myLibrary.length;i++){
+    booksParentDiv.appendChild(addBookToDOM(myLibrary[i],i))
   }
 }
 
-function addBookToDOM(book){
-  
+function addBookToDOM(book, index){
+    let bookDiv = document.createElement('div');
+    let titleNode = document.createTextNode(book.title);
+    let authorNode = document.createTextNode(book.author);
+    let pagesNode = document.createTextNode(book.pages);
+    let readNode = document.createTextNode(book.read ? 'Read' : 'Not read yet');
+    bookDiv.appendChild(titleNode);
+    bookDiv.appendChild(authorNode);
+    bookDiv.appendChild(pagesNode);
+    bookDiv.appendChild(readNode);
+    let readBtn = document.createElement('input');
+    readBtn.type = 'checkbox';
+    readBtn.checked = book.read;
+    bookDiv.appendChild(readBtn);
+    let deleteBook = document.createElement('button');
+    deleteBook.textContent = "DELETE BOOK";
+    deleteBook.classList.add('delete_book_btn');
+    bookDiv.setAttribute('book-index',index);
+    bookDiv.appendChild(deleteBook);
+    return bookDiv;
 }
+
+document.addEventListener('click', e=>{
+  const target = e.target.closest(".delete_book_btn")
+  console.log(target.parentNode);
+})
