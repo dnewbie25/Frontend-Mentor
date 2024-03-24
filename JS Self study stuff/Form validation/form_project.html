@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Project</title>
+  <style>
+    p {
+      display: block;
+      width: 300px;
+    }
+    #asterisk{
+      color: red;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 10px;
+    }
+
+    input:invalid{
+      border: 2px solid red;
+    }
+
+    input:valid:required{
+      border: 1px solid green;
+    }
+
+    .error{
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .error.active{
+      background-color: rgba(255, 0, 0, 0.438);
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>User Contact Info</h1>
+    <p>Required fields are followed by <span id="asterisk">*</span></p>
+    <fieldset>
+      <p>
+        <label for="email">Email Address <span id="asterisk">*</span></label>
+        <input type="email" name="email" id="email"
+        required >
+      </p>
+      <p>
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" list="countries">
+        <datalist id="countries">
+          <option value="">USA</option>
+          <option value="">UK</option>
+          <option value="">Colombia</option>
+          <option value="">Peru</option>
+          <option value="">Japan</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="zip">Zip Code <span id="asterisk">*</span></label>
+        <input type="text" name="zip" id="zip" required pattern="^(\d){3}-(\d){3}$">
+        <span class="error" aria-live="polite"></span>
+      </p>
+      <p>
+        <label for="password">Password <span id="asterisk">*</span></label>
+        <!-- this pattern matching is for at least 1 uppercase and 1 special character, 8 chars minimum of length -->
+        <input type="password" name="password" id="password" required minlength="8" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*]).*$">
+        <span class="error" aria-live="polite"></span>
+      </p>
+    </fieldset>
+    <p>
+      <button type="submit" id="submit">Submit</button>
+    </p>
+  </form>
+
+  <script>
+    const email = document.getElementById('email');
+    const country = document.getElementById('country');
+    const zip = document.getElementById('zip');
+    const zipError = document.querySelector('#zip + span.error');
+    const password = document.getElementById('password');
+    const passwordError = document.querySelector('#password + span.error');
+    const submit = document.getElementById('submit');
+
+    const regex = {
+      zip: [/^\d{3}-\d{3}$/,"The zip must be in the format ###-###"],
+      password: [/^(?=.*[A-Z])(?=.*[!@#$%^&*]).*$/,"At least 8 characters long, must include at least 1 uppercase and 1 special character"]
+    }
+
+    function constraint(regex, value){
+      // return the regex object to evaluate later
+      
+      const reg = new RegExp(regex[0],"");
+      return reg.test(value);
+    }
+
+    zip.addEventListener('input',(event)=>{
+      if(constraint(regex['zip'], event.target.value)){
+        zipError.textContent=""
+        zipError.className="error"
+      }else{
+        zipError.classList.add('active')
+        zipError.textContent=regex.zip[1]
+      }
+    })
+
+    password.addEventListener('input',(event)=>{
+      if(constraint(regex.password,event.target.value)){
+        zipError.textContent=""
+        zipError.className="error"
+      }else{
+        zipError.classList.add('active')
+        zipError.textContent=regex.password[1]
+      }
+    })
+
+    email.addEventListener('input',(e)=>{
+      if(email.validity.typeMismatch){
+        email.setCustomValidity("Type a correct email address!")
+      }else{
+        email.setCustomValidity("");
+      }
+    })
+  </script>
+</body>
+</html>
