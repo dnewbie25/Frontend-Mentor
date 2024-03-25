@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Basics</title>
+  <style>
+    img{
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="#">
+
+  <script>
+    // fetch
+    const img = document.querySelector('img');
+    const key = prompt('Enter the key:');
+    const search = prompt('Enter something to search')
+    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${search}`, {
+      mode: "cors"
+    })
+      .then(function (response) {
+        return response.json();
+      }
+      )
+      .then(function (response) {
+        const image = response.data.images.original.url;
+        img.src = String(image);
+        console.log(response);
+      });
+  </script>
+</body>
+
+</html>
