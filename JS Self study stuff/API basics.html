@@ -8,30 +8,47 @@
   <style>
     img{
       width: 500px;
+      height: 450px;
     }
   </style>
 </head>
 
 <body>
   <img src="#">
-
+  <p>
+    <label for="new_image">Enter what you want to see</label>
+    <input type="text" name="new_image" id="new_image" maxlength="25">
+  </p>
+  <button id="btn">Generate GIF</button>
   <script>
     // fetch
     const img = document.querySelector('img');
-    const key = prompt('Enter the key:');
-    const search = prompt('Enter something to search')
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${search}`, {
-      mode: "cors"
+    const btn = document.querySelector("#btn")
+    const search = document.querySelector("#new_image")
+    // enter the key
+    btn.addEventListener('click',e=>{
+      fetch(`https://api.giphy.com/v1/gifs/translate?api_key=ENTER_KEY_HERE&s=${search.value}`, {
+        mode: "cors"
+      })
+        .then(function (response) {
+          if(!response.ok){
+            throw new Error(`HTTPS error. Responde ${response.status} error`);
+          }
+          return response.json();
+        }
+        )
+        .then(function (response) {
+          const image = response.data.images.original.url;
+          img.src = String(image);
+        })
+        .catch(function(error){
+          if(error.message.includes('401')){
+            console.log('401 error code');
+          }else{
+            console.log('An error occured');
+          }
+        });
     })
-      .then(function (response) {
-        return response.json();
-      }
-      )
-      .then(function (response) {
-        const image = response.data.images.original.url;
-        img.src = String(image);
-        console.log(response);
-      });
   </script>
 </body>
 
