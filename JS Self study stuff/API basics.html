@@ -20,8 +20,8 @@
     <input type="text" name="new_image" id="new_image" maxlength="25">
   </p>
   <button id="btn">Generate GIF</button>
+</body>
   <script>
-    // fetch
     const img = document.querySelector('img');
     const btn = document.querySelector("#btn")
     const search = document.querySelector("#new_image")
@@ -45,11 +45,9 @@
           if(error.message.includes('401')){
             console.log('401 error code');
           }else{
-            console.log('An error occured');
+            console.log('An error occurred');
           }
         });
     })
   </script>
-</body>
-
 </html>
