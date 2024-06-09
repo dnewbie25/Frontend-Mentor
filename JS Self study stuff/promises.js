@@ -1,5 +1,5 @@
 let p = new Promise((resolve, reject) => {
-  let a = 1 + 3
+  let a = 1 + 1
   setTimeout(() => {
     if (a === 2) {
       resolve(true)
@@ -10,9 +10,9 @@ let p = new Promise((resolve, reject) => {
 });
 
 p.then((value) => {
-  console.log('The promise returned ---> ' + value);
+  console.log('The promise returned ---> ' + value); // if successful
 }).catch((error) => {
-  console.log('The promise returned ---> ' + error);
+  console.log('The promise error returned ---> ' + error); // if error
 }).finally(() => {
   // finally executes regardless of the promise result
   console.log('TASK COMPLETED!');
