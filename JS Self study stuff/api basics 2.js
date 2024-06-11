@@ -18,6 +18,6 @@ function callGiph(){
       giph.src=response.data.images.original.url
     })
     .catch((error) => {
-      throw new Error('Error found, check the input field or API key and try again.')
+      throw new Error('Error found, check the input field or API key and try again:',error)
     })
 }
